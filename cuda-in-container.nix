@@ -16,16 +16,16 @@
         "--bind=/dev/dri:/dev/dri"
 
         # needed on AMD systems with ZLUDA:
-        "--bind=/dev/kfd:/dev/kfd"
-        "--bind=/sys/devices/virtual/kfd:/sys/devices/virtual/kfd"
+        #"--bind=/dev/kfd:/dev/kfd"
+        #"--bind=/sys/devices/virtual/kfd:/sys/devices/virtual/kfd"
 
         # needed on NVIDIA systems:
-        #"--bind=/dev/nvidia-modeset:/dev/nvidia-modeset"
-        #"--bind=/dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools"
-        #"--bind=/dev/nvidiactl:/dev/nvidiactl"
-        #"--bind=/dev/nvidia-uvm:/dev/nvidia-uvm"
-        #"--bind=/dev/nvidia0:/dev/nvidia0"
-        #"--bind=/dev/nvidiactl:/dev/nvidiactl"
+        "--bind=/dev/nvidia-modeset:/dev/nvidia-modeset"
+        "--bind=/dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools"
+        "--bind=/dev/nvidiactl:/dev/nvidiactl"
+        "--bind=/dev/nvidia-uvm:/dev/nvidia-uvm"
+        "--bind=/dev/nvidia0:/dev/nvidia0"
+        "--bind=/dev/nvidiactl:/dev/nvidiactl"
       ];
     };
 
