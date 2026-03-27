@@ -45,8 +45,12 @@
             });
         in
         {
-          cuda-container-test = addRequiredFeatures [ "cuda" ] (
-            pkgs.testers.runNixOSTest ./cuda-in-container.nix
+          cuda-container-test-nvidia = addRequiredFeatures [ "cuda" ] (
+            pkgs.testers.runNixOSTest ./cuda-in-container-nvidia.nix
+          );
+
+          cuda-container-test-amd = addRequiredFeatures [ "cuda" ] (
+            pkgs.testers.runNixOSTest ./cuda-in-container-amd.nix
           );
 
           cuda-sandbox = pkgs.callPackage ./cuda-in-sandbox.nix { };

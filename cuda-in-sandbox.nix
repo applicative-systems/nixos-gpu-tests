@@ -9,5 +9,5 @@ runCommand "saxdemo"
     requiredSystemFeatures = [ "cuda" ];
   }
   ''
-    ${lib.getExe cudaPackages.saxpy} &> $out
+    ${lib.getExe cudaPackages.saxpy} 2>&1 | tee "$out"
   ''
