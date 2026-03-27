@@ -29,7 +29,7 @@ At first, make sure that your Nix daemon is configured to run [the relatively ne
     "uid-range"
   ];
 
-  # this one is only necessary vor container <-> VM networking
+  # this one is only necessary for container <-> VM networking
   nix.settings.extra-sandbox-paths = [
     "/dev/net"
   ];
