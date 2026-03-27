@@ -5,6 +5,8 @@ This repository contains everything needed to run CUDA inside the NixOS integrat
 - To learn how to configure your system and run this, see [Getting started](#getting-started)
 - In the section [Necessary patches](#necessary-patches), we explain the residual things that are not (*yet*!) in nixpkgs.
 
+![CUDA in the test driver in action](./demo.gif)
+
 ## [Getting started]
 
 To run CUDA inside the sandbox, a list of host paths need to be mapped into the sandbox.
@@ -67,6 +69,8 @@ On NVIDIA hosts, also enable the following configuration to ensure the right pat
 
 #### [AMD]
 
+*(ignore this section if you are only interested in NVIDIA)*
+
 Similar to the NVIDIA scenario, but slightly different configuration is necessary on AMD GPU hosts.
 
 This configuration snippet, based on the not-yet-upstreamed [nixpkgs branch](https://github.com/tfc/nixpkgs/tree/zluda-profile), contains the minimal needed configuration for AMD devices:
@@ -125,7 +129,7 @@ The foregoing work to upstream the necessary capabilities in nixpkgs happened in
 - [`nixos/doc: document systemd-nspawn test containers` #479968](https://github.com/NixOS/nixpkgs/pull/479968)
 - [`nixos-test-driver: Make overridable` #503686](https://github.com/NixOS/nixpkgs/pull/503686)
 
-This work implements containers in the test driver but does not yet allow for everything.
+This work implements containers in the test driver but does not yet allow for GPU related access in the container.
 
 What's missing are the following two things:
 

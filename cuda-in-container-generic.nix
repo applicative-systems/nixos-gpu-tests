@@ -25,5 +25,8 @@
 
     output = container.succeed("saxpy 2>&1")
     assert "Max error: 0.000000" in output
+
+    print("CUDA output:")
+    print(output)
   '';
 }
